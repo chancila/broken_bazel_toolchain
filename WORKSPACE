@@ -1,11 +1,10 @@
-# http_archive(
-#     name = "com_grail_bazel_toolchain",
-#     strip_prefix = "bazel-toolchain-master",
-#     urls = ["https://github.com/grailbio/bazel-toolchain/archive/master.tar.gz"],
-# )
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-local_repository(name = "com_grail_bazel_toolchain",
-                 path = "/Users/chancila/Snapchat/Dev/src/bazel-toolchain")
+http_archive(
+    name = "com_grail_bazel_toolchain",
+    strip_prefix = "bazel-toolchain-header_inclusion_error",
+    urls = ["https://github.com/chancila/bazel-toolchain/archive/header_inclusion_error.tar.gz"],
+)
 
 load("@com_grail_bazel_toolchain//toolchain:deps.bzl", "bazel_toolchain_dependencies")
 
