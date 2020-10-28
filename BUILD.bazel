@@ -1,0 +1,2 @@
+cc_binary(name = "test_bin",
+          srcs = ["test_bin.cpp"])
